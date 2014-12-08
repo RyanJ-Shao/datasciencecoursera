@@ -1,0 +1,12 @@
+a=read.csv("hw1_data.csv")
+bad<-is.na(a$Ozone)
+badd=Ozone[bad]
+length(badd)
+good=Ozone[!bad]
+mean(good)
+new=a[which(a$Ozone>31 & a$Temp>90),]
+mean(new$Solar.R)
+new=a[which(a$Month==6),]
+mean(new$Temp)
+new=a[which(a$Month==5),]
+max(new$Ozone,na.rm=TRUE)
